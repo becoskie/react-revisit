@@ -1,13 +1,13 @@
-import React from "react";
+import { Component } from "react";
 import "../stylesheets/ui.scss";
 
-export const RestaurantCount = React.createClass({
+export class RestaurantCount extends Component {
   percentToDecimal(decimal) {
     return decimal * 100 + "%";
-  },
+  }
   calcGoalProgress(total, goal) {
     return this.percentToDecimal(total / goal);
-  },
+  }
 
   render() {
     return (
@@ -32,4 +32,4 @@ export const RestaurantCount = React.createClass({
       </div>
     );
   }
-});
+}
