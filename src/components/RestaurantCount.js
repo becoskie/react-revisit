@@ -1,4 +1,5 @@
 import "../stylesheets/ui.scss";
+import Terrain from 'react-icons/lib/md/terrain'
 
 const percentToDecimal = (decimal) => {
 	return decimal * 100 + "%";
@@ -21,6 +22,7 @@ export const RestaurantCount = ({total, fancy, regular, goal}) => (
 	</div>
 	<div className="regular-days">
 		<span>{regular}</span>
+		<Terrain />
 		<span>days</span>
 	</div>
 	<div>
