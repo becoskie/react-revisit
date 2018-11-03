@@ -1,10 +1,10 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { RestaurantCount } from './components/RestaurantCount'
+import React from "react";
+import { render } from "react-dom";
+import { RestaurantCount } from "./components/RestaurantCount";
 
-window.React = React
+window.React = React;
 
 render(
-	<RestaurantCount />,
-	document.getElementById('react-container')
-)
+  <RestaurantCount total={50} fancy={20} regular={10} goal={100} />,
+  document.getElementById("react-container")
+);
