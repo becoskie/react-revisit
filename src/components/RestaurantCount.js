@@ -2,6 +2,13 @@ import React from "react";
 import "../stylesheets/ui.scss";
 
 export const RestaurantCount = React.createClass({
+  percentToDecimal(decimal) {
+    return decimal * 100 + "%";
+  },
+  calcGoalProgress(total, goal) {
+    return this.percentToDecimal(total / goal);
+  },
+
   render() {
     return (
       <div className="restaurant-day-count">
@@ -18,7 +25,9 @@ export const RestaurantCount = React.createClass({
           <span>days</span>
         </div>
         <div>
-          <span>{this.props.goal}</span>
+          <span>
+            {this.calcGoalProgress(this.props.total, this.props.goal)}
+          </span>
         </div>
       </div>
     );
